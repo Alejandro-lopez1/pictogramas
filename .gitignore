@@ -25,3 +25,11 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django local database
+backend/config/db.sqlite3
