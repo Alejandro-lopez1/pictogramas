@@ -10,4 +10,9 @@ ALLOWED_HOSTS = [
 INSTALLED_APPS += [
     "rest_framework",
     "corsheaders",
+
+    "apps.pictograms",
+    "apps.projects",
+    "apps.templates_app",
+    "apps.exports",
 ]
