@@ -1,18 +1,7 @@
-from .base import *
+from .base import *  # noqa: F401, F403
 
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-]
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="localhost,127.0.0.1", cast=Csv())  # noqa: F405
 
-INSTALLED_APPS += [
-    "rest_framework",
-    "corsheaders",
-
-    "apps.pictograms",
-    "apps.projects",
-    "apps.templates_app",
-    "apps.exports",
-]
+CORS_ALLOW_ALL_ORIGINS = config("CORS_ALLOW_ALL_ORIGINS", default=True, cast=bool)  # noqa: F405
